@@ -3,7 +3,7 @@
 # COLLISION CHECKING for simulated robot is implemented this time.
 # by Qin Chen, 5/29/2018
 ###################################################################
-import Tkinter as tk
+import tkinter as tk
 import sys
 import time
 import math
