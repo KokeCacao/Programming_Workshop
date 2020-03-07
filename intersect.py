@@ -68,12 +68,12 @@ def intersectLines( pt1, pt2, ptA, ptB ):
 
 def testIntersection( pt1, pt2, ptA, ptB ):
     """ prints out a test for checking by hand... """
-    print "Line segment #1 runs from", pt1, "to", pt2
-    print "Line segment #2 runs from", ptA, "to", ptB
+    print("Line segment #1 runs from", pt1, "to", pt2)
+    print("Line segment #2 runs from", ptA, "to", ptB)
 
     result = intersectLines( pt1, pt2, ptA, ptB )
-    print "    Intersection result =", result
-    print
+    print("    Intersection result =", result)
+    print()
 
 
 if __name__ == "__main__":

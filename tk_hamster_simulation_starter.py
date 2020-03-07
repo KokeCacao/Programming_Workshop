@@ -170,7 +170,7 @@ class virtual_world:
             y2 = obs[3]
             # first quadron
             if (a_r >= 0) and (a_r < 3.1415 / 2):
-                # print "radial intersect: ", x_e, y_e
+                # print("radial intersect: ", x_e, y_e)
                 if (y_e < y1):
                     x_i = x_e + math.tan(a_r) * (y1 - y_e)
                     y_i = y1
@@ -348,7 +348,7 @@ class virtual_world:
         y3 = shape_list[5]
         x4 = shape_list[6]
         y4 = shape_list[7]
-        # print "robot shape:", str([[(x1, y1), (x2, y2)], [(x2, y2), (x3, y3)], [(x3, y3), (x4, y4)], [(x4, y4), (x1, y1)]])
+        # print("robot shape:", str([[(x1, y1), (x2, y2)], [(x2, y2), (x3, y3)], [(x3, y3), (x4, y4)], [(x4, y4), (x1, y1)]]))
         return [[(x1, y1), (x2, y2)], [(x2, y2), (x3, y3)], [(x3, y3), (x4, y4)], [(x4, y4), (x1, y1)]]
     ######################################################################
     # This function returns True when simulated robot would collide with 

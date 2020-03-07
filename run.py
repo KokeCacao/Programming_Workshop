@@ -102,7 +102,7 @@ class GUIpart(object):
             self.move_right()
 
         # Test Code Here
-        # print "Angle: ", str(self.vWorld.vrobot.get_angle()) + ", Location:", str(self.vWorld.vrobot.get_location())
+        # print("Angle: ", str(self.vWorld.vrobot.get_angle()) + ", Location:", str(self.vWorld.vrobot.get_location()))
 
 
         return
@@ -111,7 +111,7 @@ class GUIpart(object):
             self.stop_move()
         return
     def drawGrid(self, event=None):
-        print "draw Grid"
+        print("draw Grid")
         canvas_width = self.vWorld.canvas_width
         canvas_height = self.vWorld.canvas_height
         x1 = 0
@@ -184,7 +184,7 @@ class GUIpart(object):
             robot.set_wheel(0, 0)
             robot.set_wheel(1, 0)
             self.vWorld.real_robot = False
-            print "simulated robot"
+            print("simulated robot")
             self.button11["text"] = "Real Robot"
         else:
             if (len(gRobotList) > 0):
@@ -193,18 +193,18 @@ class GUIpart(object):
                 robot.set_wheel(0, self.vWorld.vrobot.sl)
                 robot.set_wheel(1, self.vWorld.vrobot.sr)
                 self.button11["text"] = "Simulation"
-                print "connected to robot", self.vWorld.real_robot
+                print("connected to robot", self.vWorld.real_robot)
             else:
-                print "please turn on robot"
+                print("please turn on robot")
         return
     def toggleGo(self, event=None):
         if self.vWorld.go:
             self.vWorld.go = False
-            print "Pause"
+            print("Pause")
             self.button8["text"] = "Go"
         else:
             self.vWorld.go = True
-            print "Go"
+            print("Go")
             self.button8["text"] = "Pause"
         return
     def getGoal(self, event):
@@ -213,7 +213,7 @@ class GUIpart(object):
         canvas_height = self.vWorld.canvas_height
         self.vWorld.goal_x = event.x - canvas_width
         self.vWorld.goal_y = canvas_height - event.y
-        print "selected goal: ", self.vWorld.goal_x, self.vWorld.goal_y
+        print("selected goal: ", self.vWorld.goal_x, self.vWorld.goal_y)
         return
     def move_up(self, event=None):
         self.vWorld.vrobot.sl = 30
@@ -323,9 +323,9 @@ class VirtualHamsterWorld(object):
             if len(gRobotList) > 0:
                 robot = gRobotList[0]
                 waiting_for_robot = False
-                print "connected to robot"
+                print("connected to robot")
             else:
-                print "waiting for robot to connect"
+                print("waiting for robot to connect")
             time.sleep(0.1)
 
         noise_prox = 35  # noise level for proximity
@@ -454,7 +454,7 @@ def main():
     gMaxRobotNum = 1  # max number of robots to control
     comm = RobotComm(gMaxRobotNum)
     comm.start()
-    print 'Bluetooth starts'
+    print('Bluetooth starts')
     gRobotList = comm.robotList
 
     root = tk.Tk()  # root
