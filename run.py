@@ -352,24 +352,25 @@ class VirtualHamsterWorld(object):
             del_t = t - vrobot.t
             vrobot.t = t  # update the tick
 
+            self.vworld.real_robot = gRobotList[0]
+            robot = self.vworld.real_robot
             ##########################
             # Your Code Here
             ##########################self.vWorld.real_robot = gRobotList[0]
 
-            print("self.vworld.vrobot.dist_l = {}".format(self.vworld.vrobot.dist_l))
-            print("self.vworld.vrobot.floor_l = {}".format(self.vworld.vrobot.floor_l))
+            # print("self.vworld.vrobot.dist_l = {}".format(self.vworld.vrobot.dist_l))
+            # print("self.vworld.vrobot.floor_l = {}".format(self.vworld.vrobot.floor_l))
 
-            # self.vworld.vrobot.sl = 30
-            # self.vworld.vrobot.sr = 30
-            self.vworld.real_robot = gRobotList[0]
-            robot = self.vworld.real_robot
+            self.vworld.vrobot.sl = 30
+            self.vworld.vrobot.sr = 30
+            time.sleep(0.1); print("zSZZ")
             # robot.set_wheel(0, 30)
             # robot.set_wheel(1, 30)
 
-            self.vworld.real_robot = False
             ##########################
             # Your Code Here
             ##########################
+            self.vworld.real_robot = False
 
 
             # compute new pose
